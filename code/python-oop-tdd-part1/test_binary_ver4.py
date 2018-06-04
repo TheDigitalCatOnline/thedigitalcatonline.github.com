@@ -147,7 +147,7 @@ def test_binary_or():
     assert Binary('1101') | Binary('1') == Binary('1101')
 
 
-def test_binary_or():
+def test_binary_xor():
     assert Binary('1101') ^ Binary('1') == Binary('1100')
 
 
