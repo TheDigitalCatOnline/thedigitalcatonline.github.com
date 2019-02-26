@@ -137,7 +137,7 @@
 </pre></div>
 
 
-<p>Remember that if you are using Python 2 you installed the <code>mock</code> module with <code>pip</code>, so your import statement becomes <code>form mock import patch</code>.</p>
+<p>Remember that if you are using Python 2 you installed the <code>mock</code> module with <code>pip</code>, so your import statement becomes <code>from mock import patch</code>.</p>
 <p>You clearly see the context in which the patching happens, as it is enclosed in a <code>with</code> statement. Inside this statement the module <code>os.path.abspath</code> will be replaced by a mock created by the function <code>patch</code> and called <code>abspath_mock</code>. We can now give the function a <code>return_value</code> as we did with standard mocks in the first post and run the test.</p>
 <p>The code that make the test pass is</p>
 <div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">FileInfo</span><span class="p">:</span>
